@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrayM</title>
+</head>
+
+<body>
+    <script>
+        let covid_data = [
+            {
+                district: 'Ernakulam',
+                positiveCases: 34000,
+                deathRate: 2000,
+                cureRate: 23000,
+                firstDoseVaccine: 20000,
+                secondDoseVaccine: 2000
+            },
+            {
+                district: 'Idukki',
+                positiveCases: 14000,
+                deathRate: 3000,
+                cureRate: 25000,
+                firstDoseVaccine: 30000,
+                secondDoseVaccine: 1000
+            },
+            {
+                district: 'Thrissur',
+                positiveCases: 24000,
+                deathRate: 4000,
+                cureRate: 33000,
+                firstDoseVaccine: 24000,
+                secondDoseVaccine: 2500
+            },
+            {
+                district: 'Pathanamthitta',
+                positiveCases: 20000,
+                deathRate: 2000,
+                cureRate: 45000,
+                firstDoseVaccine: 22000,
+                secondDoseVaccine: 1500
+            },
+            {
+                district: 'Kozhikode',
+                positiveCases: 44000,
+                deathRate: 5000,
+                cureRate: 12000,
+                firstDoseVaccine: 21000,
+                secondDoseVaccine: 500
+            },
+            {
+                district: 'Palakkad',
+                positiveCases: 12000,
+                deathRate: 1000,
+                cureRate: 20000,
+                firstDoseVaccine: 23000,
+                secondDoseVaccine: 3400
+            },
+            {
+                district: 'Kottayam',
+                positiveCases: 27000,
+                deathRate: 1500,
+                cureRate: 27000,
+                firstDoseVaccine: 14000,
+                secondDoseVaccine: 1000
+            },
+            {
+                district: 'Kollam',
+                positiveCases: 14000,
+                deathRate: 2500,
+                cureRate: 25000,
+                firstDoseVaccine: 18000,
+                secondDoseVaccine: 2700
+            }
+        ];
+
+        console.log("Before sorting:", covid_data);
+
+        covid_data.sort(function (a, b) {
+            return a.positiveCases - b.positiveCases;
+        });
+
+        console.log("After sorting:", covid_data); // Log the sorted array
+
+        var hghstcase = covid_data[7].district
+        console.log(hghstcase);
+
+
+        covid_data.sort(function (a, b) {
+            return a.firstDoseVaccine - b.firstDoseVaccine;
+        });
+
+        console.log("After sorting:", covid_data); // Log the sorted array
+
+        var hghstFD = covid_data[7].district
+        console.log(hghstFD);
+
+        covid_data.sort(function (a, b) {
+            return a.deathRate - b.deathRate;
+        });
+
+        console.log("After sorting:", covid_data); // Log the sorted array
+
+        var lstDR = covid_data[0].district
+        console.log(lstDR);
+
+
+        covid_data.reverse(function (a, b) {
+            return a.positiveCases - b.positiveCases;
+        });
+
+        console.log("After sorting:", covid_data); // Log the sorted array
+
+        let over = covid_data.filter((p) => p.positiveCases > 15000)    
+        console.log(over);    
+
+        let thr = covid_data.filter((t) => t.district="Thrissur")
+        console.log(thr[0])
+</script>
+</body>
+
+</html>
